@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var resultado = 0; 
+
+        function menu(){
+            var escolha = parseInt(prompt('Escolha uma operação 1.) Soma 2.) Subtração  3.) Multiplicação  4.) Divisão' ));
+            switch (escolha) {
+                case 1:
+                    soma()
+                    break;
+                case 2:
+                    subtracao()
+                    break;
+                case 3:
+                    multiplicacao()
+                    break;
+                case 4: 
+                    divisao()
+                    break;
+                default:
+                    erro();
+            }
+        }
+
+        function soma(){
+            var a = parseFloat(prompt(`Digite um número para A: `));
+            var b = parseFloat(prompt(`Digite um número para B: `));
+
+            resultado = a + b; 
+            alert(`A soma de ${a} e ${b} é ${resultado} `)
+        }
+
+        function subtracao(){
+            var a = parseFloat(prompt(`Digite um número para A: `));
+            var b = parseFloat(prompt(`Digite um número para B: `));
+
+            resultado = a - b; 
+            alert(`A subtração de ${a} e ${b} é ${resultado} `)
+        }
+
+        function multiplicacao(){
+            var a = parseFloat(prompt(`Digite um número para A: `));
+            var b = parseFloat(prompt(`Digite um número para B: `));
+
+            resultado = a * b; 
+            alert(`A multiplicação de ${a} e ${b} é ${resultado} `)
+        }
+
+        function divisao(){
+            var a = parseFloat(prompt(`Digite um número para A: `));
+            var b = parseFloat(prompt(`Digite um número para B: `));
+
+            resultado = a / b; 
+            alert(`A divisão de ${a} e ${b} é ${resultado}`)
+        }
+
+        function erro(){
+            alert ('Escolha inválida');
+            menu();
+        }
+
+        menu();
+        
+
+    </script>
+</body>
+</html>
